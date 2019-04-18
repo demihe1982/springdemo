@@ -68,3 +68,14 @@ bean(*Service)
 Reference:
 https://blog.csdn.net/rainbow702/article/details/52185827
 https://docs.spring.io/spring/docs/4.3.15.RELEASE/spring-framework-reference/html/aop.html
+
+
+
+
+
+https://www.mojohaus.org/versions-maven-plugin/index.html
+
+mvn versions:set -DnewVersion=1.0.3-SNAPSHOT
+
+mvn versions:commit
+
