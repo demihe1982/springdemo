@@ -35,7 +35,7 @@ public class AspectApp {
         System.out.println("after....................................");
     }
 
-    @Around("execution(* com.example.demo.controller.v1..*.*(..))")
+    @Around("execution(public org.springframework.http.ResponseEntity<com.example.demo.vo.Demo> com.example.demo.controller.v1..*.*(..))")
     public Object around(ProceedingJoinPoint jp) throws Throwable{
         System.out.println("around....................................");
         System.out.println("[aroundAdvice] Around advice");
@@ -50,7 +50,7 @@ public class AspectApp {
         Object result=jp.proceed(args);
         String str = result.toString()+"!!!!!!!!!!!!";
         System.out.println("[aroundAdvice] Returning " + result);
-        return str;
+        return result;
     }
 
 }
